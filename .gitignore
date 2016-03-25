@@ -1,0 +1,9 @@
+.env
+node_modules/
+.DS_Store
+public/images/*.jpg
+config/initializers/assets/public/images/*.jpg
+config/initializers/assets/public/images/delegations/*.jpg
+config/initializers/assets/public/images/neighborhoods/*.jpg
+config/initializers/assets/public/images/departments/*.jpg
+/.tern-port
