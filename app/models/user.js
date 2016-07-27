@@ -1,13 +1,15 @@
 'use strict';
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+module.exports = function (db) {
 
-const UserSchema = new Schema({
-  account: String,
-  password: String
-});
+  function all() {
+    return db.query('select * from users', function (err, rows, fields) {
+      if (err) throw err;
+      console.log('The solution is: ', rows[0].solution);
+    });
+  }
 
-const User = mongoose.model('User', UserSchema);
-
-module.exports = User;
+  return {
+    all: all
+  };
+};

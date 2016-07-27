@@ -2,8 +2,8 @@
 
 var models = require('../models');
 
-exports.index = function(req, res, next) {
-  res.json({});
+exports.index = function(req, res) {
+  models.User.all()
 };
 
 exports.show = function(req, res, next) {
